@@ -1,11 +1,24 @@
 {
   "name": "best",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server",
+    "test": "babel-node --presets env --plugins babel-plugin-transform-es2015-destructuring,transform-object-rest-spread index.js",
+    "prettier": "prettier --write \"**/**.{js,json}\""
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Vasily Lavrov",
+  "license": "MIT",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chromedriver": "^2.46.0",
+    "http-server": "^0.11.1",
+    "prettier": "^1.16.4",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
 }

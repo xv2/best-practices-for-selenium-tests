@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html data-framework="vue">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Demo</title>
+    <style>
+      * {        font-size: 15pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div>Email:</div>
+      <input id="email" type="text" size="16" v-model="email" v-on:keyup.enter="login" />
+      <div>Password:</div>
+      <input type="password" size="16" v-model="password" v-on:keyup.enter="login" />
+      <div>&nbsp</div>
+      <div>
+        <button v-on:click="login">Login</button>
+        <div style="display: inline-block" v-text="checkSum"></div>
+      </div>
+    </div>
+
+    <script src="./vue.min.js"></script>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          email: '',
+          password: '',
+          checkSum: null
+        },
+        methods: {
+          updateCheckSum: function() {
+            this.checkSum =
+              (this.email + this.password).split('').reduce(function(acc, c) {
+                return acc + c.charCodeAt(0);
+              }, 0) % 255;
+          },
+          login: function() {
+            this.updateCheckSum(app);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

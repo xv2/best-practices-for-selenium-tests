@@ -7,7 +7,7 @@
     "start": "http-server",
     "test:best": "babel-node --presets env --plugins babel-plugin-transform-es2015-destructuring,transform-object-rest-spread __tests__/functional/best/index.js",
     "test:typical": "babel-node --presets env --plugins babel-plugin-transform-es2015-destructuring,transform-object-rest-spread __tests__/functional/typical/index.js",
-    "prettier": "prettier --write \"**/**.{js,json}\""
+    "prettier": "prettier --print-width 120 --single-quote --write \"**/*.{js,json,html}\""
   },
   "author": "Vasily Lavrov",
   "license": "MIT",

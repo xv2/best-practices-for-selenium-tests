@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { Builder, By, Key } from 'selenium-webdriver';
+import { Builder, Key } from 'selenium-webdriver';
 import { getPageModel } from './page-model';
 
 const HOME_URL = 'http://localhost:8080/';

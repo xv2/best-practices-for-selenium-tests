@@ -10,11 +10,11 @@ const HOME_URL = 'http://localhost:8080/';
     await driver.get(HOME_URL);
 
     // Begin test code
-    const { emailInput, passwordInput, checkSumDiv, okButton } = await getPageModel(driver);
+    const { emailInput, passwordInput, checkSumDiv, loginButton } = await getPageModel(driver);
 
     await emailInput.sendKeys('no-reply@site.com');
     await passwordInput.sendKeys('qwerty');
-    await okButton.sendKeys(Key.ENTER);
+    await loginButton.sendKeys(Key.ENTER);
 
     assert.equal(await checkSumDiv.getText(), 77, 'checkSum is wrong');
     // End test code

@@ -10,7 +10,7 @@ export const getPageModel = async driver => {
     emailInput: '//*[@id="email"]',
     passwordInput: '//*/input[2]',
     checkSumDiv: '//*/div/div[4]/div',
-    okButton: '//*/button'
+    loginButton: '//*/button'
   };
 
   const keys = Object.keys(draftModel);

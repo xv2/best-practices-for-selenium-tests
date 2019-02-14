@@ -9,7 +9,7 @@ export const getPageModel = async driver => {
   const draftModel = {
     emailInput: '//*[@id="email"]',
     passwordInput: '//*/input[2]',
-    checkSumDiv: '//*/div/div[4]/div',
+    checkSumDiv: '//*/div[4]',
     loginButton: '//*/button'
   };
 

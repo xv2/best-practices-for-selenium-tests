@@ -23,7 +23,7 @@ const getHelper = driver => ({
     await sendKeys('//*/input[2]', 'qwerty');
     await driver.findElement(By.xpath('//*/button')).sendKeys(Key.ENTER);
 
-    assert.equal(await getText('//*/div/div[4]/div'), 77, 'checkSum is wrong');
+    assert.equal(await getText('//*/div[4]'), 77, 'checkSum is wrong');
     // End test code
   } finally {
     await driver.quit();

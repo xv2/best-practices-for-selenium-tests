@@ -10,7 +10,7 @@ const HOME_URL = 'http://localhost:8080/';
     await driver.get(HOME_URL);
 
     // Begin test code
-    const { passwordInput, pinInput, checkSumDiv, okButton } = await getPageModel(driver);
+    const { emailInput, passwordInput, checkSumDiv, okButton } = await getPageModel(driver);
 
     await emailInput.sendKeys('no-reply@site.com');
     await passwordInput.sendKeys('qwerty');

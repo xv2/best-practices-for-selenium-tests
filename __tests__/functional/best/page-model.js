@@ -13,8 +13,8 @@ export const getPageModel = async driver => {
 
   const draftModel = {
     emailInput: '//*[@id="email"]',
-    passwordInput: '//*[@id="app"]/input[2]',
-    checkSumDiv: '//*[@id="app"]/div[4]/div',
+    passwordInput: '//*/input[2]',
+    checkSumDiv: '//*/div/div[4]/div',
     okButton: '//*/button'
   };
 

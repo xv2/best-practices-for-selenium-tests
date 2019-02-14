@@ -19,13 +19,11 @@ const getHelper = driver => ({
     // Begin test code
     const { getText, getValue, sendKeys } = getHelper(driver);
 
-    await sendKeys('//*[@id="pass"]', 'mySecretPassword1234');
+    await sendKeys('//*[@id="email"]', 'no-reply@site.com');
+    await sendKeys('//*/input[2]', 'qwerty');
+    await driver.findElement(By.xpath('//*/button')).sendKeys(Key.ENTER);
 
-    await driver.findElement(By.xpath('//*[@id="root"]/div[3]/button')).sendKeys(Key.ENTER);
-
-    assert.equal(await getText('//*[@id="checkSum"]'), 243, 'checkSum is wrong');
-
-    assert.equal(await getValue('//*[@id="pin"]'), '1234', 'pin is wrong');
+    assert.equal(await getText('//*/div/div[4]/div'), 77, 'checkSum is wrong');
     // End test code
   } finally {
     await driver.quit();

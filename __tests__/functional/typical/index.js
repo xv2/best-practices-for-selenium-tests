@@ -1,4 +1,8 @@
-import { Builder, By, Key } from 'selenium-webdriver';
+import { Builder, Capabilities, By, Key } from 'selenium-webdriver';
+import chrome from 'selenium-webdriver/chrome';
+import chromedriver from 'chromedriver';
+
+chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
 
 const HOME_URL = 'http://localhost:8080/';
 
@@ -9,7 +13,7 @@ const getHelper = driver => ({
 });
 
 (async () => {
-  const driver = await new Builder().forBrowser('chrome').build();
+  const driver = await new Builder().withCapabilities(Capabilities.chrome()).build();
   try {
     await driver.get(HOME_URL);
 

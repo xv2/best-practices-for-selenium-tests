@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server",
-    "test:best": "babel-node --presets env --plugins babel-plugin-transform-es2015-destructuring,transform-object-rest-spread __tests__/functional/best/index.js",
-    "test:typical": "babel-node --presets env --plugins babel-plugin-transform-es2015-destructuring,transform-object-rest-spread __tests__/functional/typical/index.js",
+    "start": "http-server -p 8080",
+    "test:best": "babel-node --presets env --plugins transform-object-rest-spread __tests__/functional/best/index.js",
+    "test:typical": "babel-node --presets env __tests__/functional/typical/index.js",
     "prettier": "prettier --print-width 120 --single-quote --write \"**/*.{js,json,html}\""
   },
   "author": "Vasily Lavrov",

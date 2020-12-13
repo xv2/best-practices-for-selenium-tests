@@ -28,19 +28,19 @@
         data: {
           email: '',
           password: '',
-          checkSum: null
+          checkSum: null,
         },
         methods: {
-          updateCheckSum: function() {
+          updateCheckSum: function () {
             this.checkSum =
-              (this.email + this.password).split('').reduce(function(acc, c) {
+              (this.email + this.password).split('').reduce(function (acc, c) {
                 return acc + c.charCodeAt(0);
               }, 0) % 255;
           },
-          login: function() {
+          login: function () {
             this.updateCheckSum(app);
-          }
-        }
+          },
+        },
       });
     </script>
   </body>

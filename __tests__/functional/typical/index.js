@@ -6,10 +6,10 @@ chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
 
 const HOME_URL = 'http://localhost:8080/';
 
-const getHelper = driver => ({
-  getText: async xpath => driver.findElement(By.xpath(xpath)).getText(),
+const getHelper = (driver) => ({
+  getText: async (xpath) => driver.findElement(By.xpath(xpath)).getText(),
 
-  sendKeys: async (xpath, keys) => driver.findElement(By.xpath(xpath)).sendKeys(keys)
+  sendKeys: async (xpath, keys) => driver.findElement(By.xpath(xpath)).sendKeys(keys),
 });
 
 (async () => {

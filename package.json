@@ -12,13 +12,13 @@
   "author": "Vasily Lavrov",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-plugin-transform-es2015-destructuring": "6.23.0",
-    "babel-plugin-transform-object-rest-spread": "6.26.0",
-    "babel-preset-env": "1.7.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "chromedriver": "^87.0.4",
     "http-server": "^0.12.3",
-    "prettier": "1.16.4",
-    "selenium-webdriver": "3.6.0"
+    "prettier": "^2.2.1",
+    "selenium-webdriver": "^4.0.0-alpha.8"
   }
 }
